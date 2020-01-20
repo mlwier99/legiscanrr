@@ -34,7 +34,7 @@ parse_people <- function(people_json){
     pb$tick()
 
     # Import json
-    input_people <- jsonlite::fromJSON(input_people_json)
+    input_people <- jsonlite::fromJSON(input_people_json, flatten=T)
 
     # Keep inner element
     people_meta <- input_people[["person"]]
